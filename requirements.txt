@@ -4,7 +4,7 @@ folium
 streamlit-folium
 wikipedia
 requests
-sklearn
+scikit-learn
 LinearRegression
 regex
 network
