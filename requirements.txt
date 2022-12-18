@@ -1,0 +1,10 @@
+seaborn==0.11.2
+matplotlib==3.5.2
+folium
+streamlit-folium
+wikipedia
+requests
+sklearn
+LinearRegression
+regex
+network
