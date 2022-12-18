@@ -8,4 +8,4 @@ sklearn
 LinearRegression
 regex
 network
-itertools==8.0.0
+itertools==7.0.0
