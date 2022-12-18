@@ -21,3 +21,4 @@ vectorizer = TfidfVectorizer(max_df=0.95, min_df=0.05)
 
 #print(col_wor)
 
+
