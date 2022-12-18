@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 import streamlit as st
-from sklearn.feature_extraction.text import TfidfVectorizer
 
 cat = pd.read_csv('Categories.csv')
 col_wor = pd.read_csv('collage_words.csv')
@@ -17,7 +16,7 @@ st.write(min1)
 col_wor.dropna(inplace=True)
 brandwise = col_wor.groupby(by=['Brand'], as_index=False).agg(lambda x: ", ".join(x))
 all_words_beauty = list(chain(*words["Words"].apply(lambda x: x.split(", ")).values))
-vectorizer = TfidfVectorizer(max_df=0.95, min_df=0.05)
+vectorizer = sklearn.feature_extraction.text.TfidfVectorizer(max_df=0.95, min_df=0.05)
 
 #print(col_wor)
 
