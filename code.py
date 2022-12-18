@@ -20,3 +20,4 @@ all_words_beauty = list(chain(*words["Words"].apply(lambda x: x.split(", ")).val
 vectorizer = TfidfVectorizer(max_df=0.95, min_df=0.05)
 
 #print(col_wor)
+
