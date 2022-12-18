@@ -8,4 +8,6 @@ for i in cat['Category'].unique():
   st.write(i)
 dep_st = cat[cat['Category'] == 'Department Stores']
 dep_st
+for i in dep_st['Brand'].unique():
+  st.write(i)
 #print(col_wor)
