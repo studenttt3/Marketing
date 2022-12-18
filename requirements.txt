@@ -8,4 +8,3 @@ sklearn
 LinearRegression
 regex
 network
-TfidfVectorizer
