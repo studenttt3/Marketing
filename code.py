@@ -11,6 +11,14 @@ summ = 0
 type_s = []
 for i in scores.columns[1:]:
   type_s.append(st.radio(i, ('Отрицательно','Нейтрально', 'Положительно')))
+for i in range(len(scores['index'])):
+  brand_rate = 0
+  for j in range(len(scores.columns[1:])):
+    if(type_s[j] == 'Отрицательно'): brand_rate = brand_rate + (10 - scores[i, scores.columns[j + 1]])
+    if(type_s[j] == 'Положительно'): brand_rate = brand_rate + scores[i, scores.columns[j + 1]]
+      
+  scores.loc[i, 'rating'] = brand_rate
+scores
   #if(type_s == 'Отрицательно'): summ = summ + scores[
     
 
