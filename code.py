@@ -24,4 +24,6 @@ for i in range(len(scores['index'])):
     if(type_s[j] == 'Положительно'): brand_rate = brand_rate + int(br_sc[j])
     else: brand_rate = brand_rate
   scores.loc[i, 'rating'] = brand_rate
-scores
+#scores
+sorted_sc = scores.sort_values(by='rating', reverse = True)
+sorted_sr
