@@ -5,6 +5,11 @@ import sklearn
 
 cat = pd.read_csv('Categories.csv')
 col_wor = pd.read_csv('collage_words.csv')
+
+st.header("Добро пожаловать, дорогой друг!")
+st.markdown("Мы, создатели этого проекта, хотим, чтобы шопинг для вас стал проще, быстрее, а выбор товаров наиболее точно попадал в ваши запросы.")
+st.image("https://assets.teenvogue.com/photos/62e08a1c0273eb8e9a147959/3:4/w_3075,h_4100,c_limit/GettyImages-1177004878.jpg")
+st.markdown("Пожалуйста, выберите категорию товаров, а мы подберем наиболее подходящие бренды внутри этой категории.")
 cat_ch = st.selectbox("Категория", cat['Category'].unique())
 scores = pd.read_csv(cat_ch + '.csv')
 
