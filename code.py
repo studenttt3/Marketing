@@ -16,7 +16,7 @@ for i in range(len(scores['index'])):
   brand_rate = 0
   br_sc = list(scores.iloc[i][0])
   st.write(br_sc)
-  for j in range(len(scores.columns[1:])-1):
+  #for j in range(len(scores.columns[1:])-1):
     #st.write(scores.columns[j + 1])
     
     
