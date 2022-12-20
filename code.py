@@ -14,7 +14,7 @@ for i in scores.columns[1:]:
   type_s.append(st.radio(i, ('Отрицательно','Нейтрально', 'Положительно')))
 for i in range(len(scores['index'])):
   brand_rate = 0
-  br_sc = list(scores.iloc[i])
+  br_sc = list(scores.iloc[i][1:])
   st.write(br_sc)
   #for j in range(len(scores.columns[1:])-1):
     #st.write(scores.columns[j + 1])
