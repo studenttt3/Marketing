@@ -21,4 +21,4 @@ for i in range(len(scores['index'])):
     st.write(int(br_sc[j]))
     if(type_s[j] == 'Отрицательно'): brand_rate = brand_rate + (10 - int(br_sc[j]))
     if(type_s[j] == 'Положительно'): brand_rate = brand_rate + int(br_sc[j])
-   st.write(brand_rate)
+  st.write(brand_rate)
