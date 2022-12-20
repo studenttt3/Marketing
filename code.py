@@ -25,5 +25,5 @@ for i in range(len(scores['index'])):
     else: brand_rate = brand_rate
   scores.loc[i, 'rating'] = brand_rate
 #scores
-sorted_sc = scores.sort_values(by='rating', reverse = True)
+sorted_sc = scores.sort_values(by='rating')
 sorted_sr
