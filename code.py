@@ -60,7 +60,7 @@ for i in range(5):
 scores1 = scores.drop(columns=["index", "rating"])
 
 fig = plt.figure(figsize = (10,8), dpi = 80)
-sns.heatmap(scores1.corr(), xticklabels = scores1.corr().columns, yticklabels = scores1.corr().columns, cmap ='RdYlGn', center = 0, annot = True)
+sns.heatmap(scores1.corr(), xticklabels = scores1.corr().columns, yticklabels = scores1.corr().columns, cmap ='RdYlGn', center = 0, annot = False)
 plt.title('Коррелограмм', fontsize = 24)
 plt.xticks(fontsize = 10)
 plt.yticks(fontsize = 10)
