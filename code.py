@@ -15,6 +15,8 @@ if(cat_ch == 'Beverages'):
   st.image("https://www.mbbmanagement.com/wp-content/uploads/2020/03/beverage-management.jpg")
 if(cat_ch == 'Clothing products'):
   st.image("https://images.squarespace-cdn.com/content/v1/58c90e50bebafbba1ac44f56/1603290772524-SKGGCSIPRRDR7HSVVA6X/baby+clothes.jpg")
+if(cat_ch == 'Cars'):
+  st.image("https://aif-s3.aif.ru/images/016/664/d7018fd8b45e9c280c4f70f0692d400e.jpg")
 scores = pd.read_csv(cat_ch + '.csv')
 
 st.markdown("В зависимости от располагаемого времени выберите тип подбора. Мы можем сделать более быстрый подбор с меньшим количеством вопросов в опроснике или более точный, но требующий от вас большего количества ответов.")
