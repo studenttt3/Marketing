@@ -12,7 +12,7 @@ st.image("https://assets.teenvogue.com/photos/62e08a1c0273eb8e9a147959/3:4/w_307
 st.markdown("Пожалуйста, выберите категорию товаров, а мы подберем наиболее подходящие бренды внутри этой категории.")
 cat_ch = st.selectbox("Категория", cat['Category'].unique())
 if(cat_ch == 'Beverage'):
-  st.image("https://www.beveragedaily.com/var/wrbm_gb_food_pharma/storage/images/_aliases/wrbm_large/publications/food-beverage-nutrition/beveragedaily.com/article/2020/03/31/beverage-webinar-today-what-drinks-do-consumers-want/10866454-1-eng-GB/Beverage-webinar-today-What-drinks-do-consumers-want.jpg")
+  st.image("https://www.mbbmanagement.com/wp-content/uploads/2020/03/beverage-management.jpg")
 scores = pd.read_csv(cat_ch + '.csv')
 
 st.markdown("В зависимости от располагаемого времени выберите тип подбора. Мы можем сделать более быстрый подбор с меньшим количеством вопросов в опроснике или более точный, но требующий от вас большего количества ответов.")
