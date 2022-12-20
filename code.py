@@ -3,20 +3,24 @@ import numpy as np
 import streamlit as st
 import sklearn
 
-
 cat = pd.read_csv('Categories.csv')
 col_wor = pd.read_csv('collage_words.csv')
 cat_ch = st.selectbox("Категория", cat['Category'].unique())
 scores = pd.read_csv(cat_ch + '.csv')
+
+which = st.radio('Что важнее для вас при подборе брендов', ('Быстрота', 'Точность'))
+if(which == 'Быстрота'): n = 5
+if(which == 'Точность'): n = 25
+
 scores
 summ = 0
 type_s = []
-for i in scores.columns[1:]:
+for i in scores.columns[1:n]:
   type_s.append(st.radio(i, ('Отрицательно','Нейтрально', 'Положительно'), index = 1))
 #st.write(len(type_s))
 for i in range(len(scores['index'])):
   brand_rate = 0
-  br_sc = list(scores.iloc[i][1:25])
+  br_sc = list(scores.iloc[i][1:n])
   #st.write(len(br_sc))
   #st.write(br_sc)
   for j in range(len(br_sc)):
