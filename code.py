@@ -18,4 +18,4 @@ for i in range(len(scores['index'])):
   br_sc = list(scores.iloc[i][1:])
   st.write(br_sc)
   for j in range(len(br_sc)):
-    st.write(int(br_sc[j])
+    st.write(int(br_sc[j]))
