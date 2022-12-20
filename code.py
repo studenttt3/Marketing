@@ -27,4 +27,6 @@ for i in range(len(scores['index'])):
 #scores
 sorted_sc = scores.sort_values(by='rating')
 sorted_sc
-st.write(sorted_sc['index'][-5:-1])
+for i in range(5):
+  st.write("5 самых подходящих по характеристикам брендов:")
+  st.write(sorted_sc['index'][len(sorted_sc) - 1 - i])
