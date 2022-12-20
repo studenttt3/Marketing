@@ -11,7 +11,7 @@ scores
 summ = 0
 type_s = []
 for i in scores.columns[1:]:
-  type_s.append(st.radio(i, ('Отрицательно','Нейтрально', 'Положительно')))
+  type_s.append(st.radio(i, ('Отрицательно','Нейтрально', 'Положительно'), index = 1))
 for i in range(len(scores['index'])):
   brand_rate = 0
   br_sc = list(scores.iloc[i][1:])
