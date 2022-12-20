@@ -26,7 +26,3 @@ for i in range(len(scores['index'])):
   #scores.loc[i, 'rating'] = brand_rate
 #scores
   #if(type_s == 'Отрицательно'): summ = summ + scores[
-    
-
-
-
