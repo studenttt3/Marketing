@@ -54,3 +54,4 @@ sorted_sc = sorted_sc.reset_index()
 st.write("5 самых подходящих по характеристикам брендов:")
 for i in range(5):
   st.write(sorted_sc['index'][len(sorted_sc) - 1 - i])
+  
