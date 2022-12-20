@@ -11,7 +11,7 @@ st.markdown("Мы, создатели этого проекта, хотим, ч�
 st.image("https://assets.teenvogue.com/photos/62e08a1c0273eb8e9a147959/3:4/w_3075,h_4100,c_limit/GettyImages-1177004878.jpg", width = 300)
 st.markdown("Пожалуйста, выберите категорию товаров, а мы подберем наиболее подходящие бренды внутри этой категории.")
 cat_ch = st.selectbox("Категория", cat['Category'].unique())
-if(cat_ch == 'Beverage'):
+if(cat_ch == 'Beverages'):
   st.image("https://www.mbbmanagement.com/wp-content/uploads/2020/03/beverage-management.jpg")
 scores = pd.read_csv(cat_ch + '.csv')
 
