@@ -27,3 +27,4 @@ for i in range(len(scores['index'])):
 #scores
 sorted_sc = scores.sort_values(by='rating')
 sorted_sc
+st.write(sorted_sc['index'][-5:-1])
