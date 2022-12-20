@@ -57,10 +57,10 @@ st.write("5 самых подходящих по характеристикам 
 for i in range(5):
   st.write(sorted_sc['index'][len(sorted_sc) - 1 - i])
   
-scores.drop(columns=["index", "rating"])
+scores1 = scores.drop(columns=["index", "rating"])
 
 fig = plt.figure(figsize = (10,8), dpi = 80)
-sns.heatmap(scores.corr(), xticklabels = scores.corr().columns, yticklabels = scores.corr().columns, cmap ='RdYlGn', center = 0, annot = True)
+sns.heatmap(scores1.corr(), xticklabels = scores1.corr().columns, yticklabels = scores1.corr().columns, cmap ='RdYlGn', center = 0, annot = True)
 plt.title('Коррелограмм', fontsize = 24)
 plt.xticks(fontsize = 10)
 plt.yticks(fontsize = 10)
