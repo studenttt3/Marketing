@@ -14,7 +14,7 @@ for i in scores.columns[1:]:
 for i in range(len(scores['index'])):
   brand_rate = 0
   for j in range(len(scores.columns[1:])-1):
-    print(scores.columns[j + 1])
+    st.write(scores.columns[j + 1])
     #print(scores[i, scores.columns[j + 1]])
     #if(type_s[j] == 'Отрицательно'): brand_rate = brand_rate + (10 - scores[i, scores.columns[j + 1]])
     #if(type_s[j] == 'Положительно'): brand_rate = brand_rate + scores[i, scores.columns[j + 1]]
