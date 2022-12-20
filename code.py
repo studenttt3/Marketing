@@ -17,7 +17,7 @@ for i in range(len(scores['index'])):
   brand_rate = 0
   br_sc = list(scores.iloc[i][1:25])
   #st.write(len(br_sc))
-  st.write(br_sc)
+  #st.write(br_sc)
   for j in range(len(br_sc)):
     #st.write(int(br_sc[j]))
     if(type_s[j] == 'Отрицательно'): brand_rate = brand_rate + 10 - int(br_sc[j])
