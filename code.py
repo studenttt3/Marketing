@@ -90,7 +90,7 @@ ank = pd.read_csv("ank.csv")
 llsstt = []
 for i in range(5):
   sttr = ank['anketa0']
-  for j in range(5):
+  for j in range(4):
     sttr = sttr + ' ' + ank['anketa' + str(i + 1)]
   llsstt.append(sttr)
 st.write(llsstt)
