@@ -100,6 +100,6 @@ rec = pd.read_csv("rec.csv")
 ser = rec['rec' + str(llsstt.index(not_like))]
 st.write("Вероятно, вам понравятся такие бренды: ")
 sttr = ser[0]
-  for j in range(4):
-    sttr = sttr + ', ' + ser[j + 1]
+for j in range(4):
+  sttr = sttr + ', ' + ser[j + 1]
 st.write(sttr)
