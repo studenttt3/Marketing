@@ -97,4 +97,4 @@ st.write(llsstt)
 not_like = st.radio('', (llsstt), index = 1)
 
 rec = pd.read_csv("rec.csv")
-rec
+st.write(rec[llsstt.index(not_like)])
