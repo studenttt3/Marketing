@@ -114,5 +114,5 @@ sttr = ser[0]
 for j in range(4):
   sttr = sttr + ', ' + ser[j + 1]
 st.write(sttr)
-optionals2 = st.expander("Оцените", True)
-page_min2 = optionals2.slider("", min_value = 0, max_value = 5)
+#optionals2 = st.expander("Оцените", True)
+page_min2 = optionals1.slider("Оцените", min_value = 0, max_value = 5)
