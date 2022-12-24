@@ -97,4 +97,9 @@ st.write(llsstt)
 not_like = st.radio('', (llsstt), index = 1)
 
 rec = pd.read_csv("rec.csv")
-st.write(rec['rec' + str(llsstt.index(not_like))])
+ser = rec['rec' + str(llsstt.index(not_like))]
+st.write("Вероятно, вам понравятся такие бренды: ")
+sttr = ser[0]
+  for j in range(4):
+    sttr = sttr + ', ' + ser[j + 1]
+st.write(sttr)
