@@ -60,6 +60,7 @@ for i in range(5):
 
 scores1 = scores.drop(columns=["index", "rating"])
 
+st.write("Ниже вы можете увидеть коррелограмм, позволяющий увидеть взаимосвязь слов, на основе рекламы разных брендов этой категории. То есть, чем чаще данные два слова встречаются одновременно и чем реже по отдельности - тем сильнее они связаны. Например, большие тёмно-зелёные квадраты, которые есть в некоторых категориях, отражают целые блоки связанных по смыслу слов.")
 fig = plt.figure(figsize = (10,8), dpi = 80)
 sns.heatmap(scores1.corr(), xticklabels = scores1.corr().columns, yticklabels = scores1.corr().columns, cmap ='RdYlGn', center = 0, annot = False)
 plt.title('Коррелограмм', fontsize = 24)
@@ -67,6 +68,7 @@ plt.xticks(fontsize = 10)
 plt.yticks(fontsize = 10)
 st.pyplot(fig)
 
+st.write("А здесь вы можете посмотреть гистограмму распределения слов внутри нашей категории брендов. Как вы можете видеть, большинство слов встречаются очень редко, 1-2 раза.")
 col_wor.dropna(inplace=True)
 brandwise = col_wor.groupby(by=['Brand'], as_index=False).agg(lambda x: ", ".join(x))
 category1 = list(np.unique(np.array(cat['Category'])))
@@ -85,6 +87,7 @@ fig = plt.figure(figsize = (10,8), dpi = 80)
 words_stat.hist(bins=50, color='powderblue')
 st.pyplot(fig)
 
+st.write("Именно поэтому важно использовать показатель не частоты слов, а их TF-IDF, который учитывает ещё и их уникальность для данной категории. На графике ниже видно, что график TF-IDF более сглажен, чем предыдущая гистограмма.")
 our_vector = pd.read_csv(cat_ch + '_idf.csv')
 fig1 = plt.figure(figsize = (10,8), dpi = 80)
 our_vector['tfidf'].hist(bins=50, color='lightseagreen')
