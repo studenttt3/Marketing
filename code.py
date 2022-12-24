@@ -85,7 +85,7 @@ fig = plt.figure(figsize = (10,8), dpi = 80)
 words_stat.hist(bins=50, label='Beverages', color='powderblue')
 st.pyplot(fig)
 
-our_vector = pd.read_csv(k + '_idf.csv')
+our_vector = pd.read_csv(cat_ch + '_idf.csv')
 df = pd.DataFrame(our_vector.T.todense(), index=vectorizer1.get_feature_names(), columns=["tfidf"])
 df.sort_values(by=["tfidf"],ascending=False)
 fig = plt.figure(figsize = (10,8), dpi = 80)
