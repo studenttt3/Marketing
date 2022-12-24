@@ -66,3 +66,19 @@ plt.title('Коррелограмм', fontsize = 24)
 plt.xticks(fontsize = 10)
 plt.yticks(fontsize = 10)
 st.pyplot(fig)
+
+col_wor.dropna(inplace=True)
+brandwise = col_wor.groupby(by=['Brand'], as_index=False).agg(lambda x: ", ".join(x))
+category1 = list(np.unique(np.array(cat['Category'])))
+categorywise1 = []
+ccccc = 0
+for i in category1:
+    print(i)
+    categorywise1.append('')
+    print(cat.iloc[cat.index[cat['Category'] == i].tolist()]['Brand'])
+    for j in cat.iloc[cat.index[cat['Category'] == i].tolist()]['Brand']:
+        categorywise1[ccccc] += brandwise.iloc[brandwise.index[brandwise['Brand'] == j].tolist()[0]]['Words']
+    ccccc += 1
+categorywisedf = pd.DataFrame({'Category': category1, 'Words': categorywise1})
+words_stat = pd.Series(categorywisedf.iloc[0]['Words'].split(", ")).value_counts()
+words_stat.hist(bins=50, label='Beverages', color='powderblue')
