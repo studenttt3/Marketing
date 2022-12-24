@@ -58,8 +58,7 @@ st.write("5 самых подходящих по характеристикам 
 for i in range(5):
   st.write(sorted_sc['index'][len(sorted_sc) - 1 - i])
   
-optionals1 = st.expander("Оцените то, насколько вам понравилась наша подборка брендов", True)
-page_min = optionals1.slider("", min_value = 0, max_value = 5)
+
 
 scores1 = scores.drop(columns=["index", "rating"])
 
@@ -114,5 +113,6 @@ sttr = ser[0]
 for j in range(4):
   sttr = sttr + ', ' + ser[j + 1]
 st.write(sttr)
-#optionals2 = st.expander("Оцените", True)
-page_min2 = optionals1.slider("Оцените", min_value = 0, max_value = 5)
+optionals1 = st.expander("Оцените то, насколько вам понравились наши подборки брендов", True)
+page_min = optionals1.slider("Подборка по ассоциациям и характеристикам", min_value = 0, max_value = 5, value = 3)
+page_min2 = optionals1.slider("Подборка по понравившимся похожим на вас по предпочтениям пользователям", min_value = 0, max_value = 5, value = 3)
