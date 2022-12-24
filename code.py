@@ -82,12 +82,12 @@ for i in category1:
 categorywisedf = pd.DataFrame({'Category': category1, 'Words': categorywise1})
 words_stat = pd.Series(categorywisedf.iloc[category1.index(cat_ch)]['Words'].split(", ")).value_counts()
 fig = plt.figure(figsize = (10,8), dpi = 80)
-words_stat.hist(bins=50, label='Beverages', color='powderblue')
+words_stat.hist(bins=50, color='powderblue')
 st.pyplot(fig)
 
 our_vector = pd.read_csv(cat_ch + '_idf.csv')
 fig1 = plt.figure(figsize = (10,8), dpi = 80)
-our_vector.hist(bins=50, label=cat_ch, color='lightsalmon')
+our_vector.hist(bins=50, color='powderblue')
 st.pyplot(fig1)
 
 st.markdown("Но это еще не всё! Мы хотим дать вам еще больше рекомендаций, основываясь на том, какие бренды косметики нравились пользователям, похожим на вас. При этом мы хотим минимизировать ваше недовольство. Пожалуйста, выберите из следующих списков брендов тот, который нравится вам меньше всего.")
