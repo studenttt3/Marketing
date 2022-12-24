@@ -57,6 +57,9 @@ sorted_sc = sorted_sc.reset_index()
 st.write("5 самых подходящих по характеристикам брендов:")
 for i in range(5):
   st.write(sorted_sc['index'][len(sorted_sc) - 1 - i])
+  
+optionals1 = st.expander("Оцените то, насколько вам понравилась наша подборка брендов", True)
+page_min = optionals1.slider("Минимальное количество страниц", min_value = 0, max_value = 5)
 
 scores1 = scores.drop(columns=["index", "rating"])
 
@@ -111,3 +114,5 @@ sttr = ser[0]
 for j in range(4):
   sttr = sttr + ', ' + ser[j + 1]
 st.write(sttr)
+optionals2 = st.expander("Оцените то, насколько вам понравилась наша подборка брендов", True)
+page_min = optionals2.slider("Минимальное количество страниц", min_value = 0, max_value = 5)
