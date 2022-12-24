@@ -93,12 +93,12 @@ for i in range(5):
   for j in range(4):
     sttr = sttr + ', ' + ank['anketa' + str(i)][j + 1]
   llsstt.append(sttr)
-st.write(llsstt)
+#st.write(llsstt)
 not_like = st.radio('', (llsstt), index = 1)
 
 rec = pd.read_csv("rec.csv")
 ser = rec['rec' + str(llsstt.index(not_like))]
-st.write("Вероятно, вам понравятся такие бренды: ")
+st.write("Вероятно, вам понравятся следующие бренды: ")
 sttr = ser[0]
 for j in range(4):
   sttr = sttr + ', ' + ser[j + 1]
