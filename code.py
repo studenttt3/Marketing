@@ -87,6 +87,14 @@ st.pyplot(fig)
 
 st.markdown("Но это еще не всё! Мы хотим дать вам еще больше рекомендаций, основываясь на том, какие бренды косметики нравились пользователям, похожим на вас. При этом мы хотим минимизировать ваше недовольство. Пожалуйста, выберите из следующих списков брендов тот, который нравится вам меньше всего.")
 ank = pd.read_csv("ank.csv")
-st.radio('', (ank['anketa0'],ank['anketa1'], ank['anketa2'], ank['anketa3'], ank['anketa4']), index = 1)
+llsstt = []
+for i in range(5):
+  sttr = ank['anketa0']
+  for j in range(5):
+    sttr = sttr + ' ' + ank['anketa' + str(i + 1)]
+  llsstt.append(sttr)
+st.write(llsstt)
+not_like = st.radio('', (ank['anketa0'],ank['anketa1'], ank['anketa2'], ank['anketa3'], ank['anketa4']), index = 1)
+
 rec = pd.read_csv("rec.csv")
 rec
