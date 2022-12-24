@@ -57,7 +57,7 @@ sorted_sc = sorted_sc.reset_index()
 st.write("5 самых подходящих по характеристикам брендов:")
 for i in range(5):
   st.write(sorted_sc['index'][len(sorted_sc) - 1 - i])
-  
+
 scores1 = scores.drop(columns=["index", "rating"])
 
 fig = plt.figure(figsize = (10,8), dpi = 80)
@@ -84,3 +84,7 @@ words_stat = pd.Series(categorywisedf.iloc[category1.index(cat_ch)]['Words'].spl
 fig = plt.figure(figsize = (10,8), dpi = 80)
 words_stat.hist(bins=50, label='Beverages', color='powderblue')
 st.pyplot(fig)
+
+st.markdown("Но это еще не всё! Мы хотим дать вам еще больше рекомендаций, основываясь на том, какие бренды косметики нравились пользователям, похожим на вас. При этом мы хотим минимизировать ваше недовольство. Пожалуйста, выберите из следующих списков брендов тот, который нравится вам меньше всего.")
+ank = pd.read_csv("ank.csv")
+st.radio('', (ank['anketa0'],ank['anketa1'], ank['anketa2'], ank['anketa3'], ank['anketa4']), index = 1)
