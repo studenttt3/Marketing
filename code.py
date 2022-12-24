@@ -114,7 +114,9 @@ sttr = ser[0]
 for j in range(4):
   sttr = sttr + ', ' + ser[j + 1]
 st.write(sttr)
-optionals1 = st.expander("Оцените то, насколько вам понравились наши подборки брендов", True)
+
+st.subheader("Нам очень важна ваша обратная связь")
+optionals1 = st.expander("Пожалуйста, оцените то, насколько вам понравились наши подборки брендов", True)
 page_min = optionals1.slider("Подборка по ассоциациям и характеристикам", min_value = 0, max_value = 5, value = 3)
 page_min2 = optionals1.slider("Подборка по понравившимся похожим на вас по предпочтениям пользователям", min_value = 0, max_value = 5, value = 3)
 st.subheader("Благодарим вас за использование нашего сервиса и обратную связь! Будем ждать в гости снова!")
