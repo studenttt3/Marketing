@@ -81,6 +81,6 @@ for i in category1:
     ccccc += 1
 categorywisedf = pd.DataFrame({'Category': category1, 'Words': categorywise1})
 words_stat = pd.Series(categorywisedf.iloc[category1.index(cat_ch)]['Words'].split(", ")).value_counts()
-words_stat.hist(bins=50, label='Beverages', color='powderblue')
 fig = plt.figure(figsize = (10,8), dpi = 80)
+words_stat.hist(bins=50, label='Beverages', color='powderblue')
 st.pyplot(fig)
