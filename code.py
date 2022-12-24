@@ -91,7 +91,7 @@ llsstt = []
 for i in range(5):
   sttr = ank['anketa0']
   for j in range(4):
-    sttr = sttr + ' ' + ank['anketa' + str(i + 1)]
+    sttr = sttr + ' ' + ank['anketa' + str(j + 1)]
   llsstt.append(sttr)
 st.write(llsstt)
 not_like = st.radio('', (ank['anketa0'],ank['anketa1'], ank['anketa2'], ank['anketa3'], ank['anketa4']), index = 1)
