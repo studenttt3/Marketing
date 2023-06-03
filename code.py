@@ -5,6 +5,7 @@ import sklearn
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+
 cat = pd.read_csv('Categories.csv')
 col_wor = pd.read_csv('collage_words.csv')
 
